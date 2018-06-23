@@ -6,8 +6,8 @@ class Radiancy < Formula
   # depends_on "cmake" => :build
 
   def install
-    system "cd /usr/local/Homebrew/Library/Taps/udtrokia/homebrew-udtrokia/radiancy && cargo build --release"
-    bin.install "/usr/local/Homebrew/Library/Taps/udtrokia/homebrew-udtrokia/radiancy/target/release"
+    system "cd  /Users/mercury/Library/Caches/Homebrew/radiancy--git && cargo build --release"
+    bin.install " /Users/mercury/Library/Caches/Homebrew/radiancy--git/target/release"
   end
 
   test do
