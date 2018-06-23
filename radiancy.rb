@@ -1,13 +1,12 @@
 class Radiancy < Formula
   desc "Try Rust by Blockchain"
+  url "https://github.com/udtrokia/Radiancy/archive/v0.0.14.tar.gz"
   homepage "https://udtrokia.github.io/Radiancy"
   head "https://github.com/udtrokia/Radiancy.git", :using => :git
 
-  # depends_on "cmake" => :build
-
   def install
-    system "cd  /Users/mercury/Library/Caches/Homebrew/radiancy--git && cargo build --release"
-    bin.install " /Users/mercury/Library/Caches/Homebrew/radiancy--git/target/release"
+    system "sh scripts/build.sh"
+    bin.install "target/release"
   end
 
   test do
