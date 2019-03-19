@@ -2,10 +2,9 @@
 class Cita < Formula
   desc "A high performance blockchain for enterprise users."
   homepage "https://docs.citahub.com/en-US/welcome"  
-  url "https://github.com/clearloop/cita/releases/download/self_optimization/cita_compiled@0.20.3.zip"
-  sha256 "34663e874d5d09ba68b3665cd80f37646315f906ea1db99c09db32aea3ef6421"
-
-  depends_on "docker"
+  url "https://github.com/clearloop/cita/releases/download/formula%400.21/cita_0.21_ed25519.zip"
+  sha256 "b108126375ed67af24b5387adcdf127280ef06d420e3b07d5646fcb68fa1a4d7"
+  version "0.21"
   
   def install
     libexec.install Dir["*"]
@@ -17,12 +16,6 @@ class Cita < Formula
 
      #{libexec}
 
-     You may want to add this to your PATH:
-
-     export CITA_HOME=$HOME/Library/cita
-     export CITA_PATH=#{libexec}
-
-     $ cita
      Usage: cita_commander <command> <node> [options]
      where <command> is one of the following:
          { help | setup | start | stop | restart | ping
@@ -34,5 +27,3 @@ class Cita < Formula
   EOS
   end
 end
-  
-  
